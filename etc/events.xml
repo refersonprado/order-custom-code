@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © Magento, Inc. All rights reserved.
+  ~
+  ~ @author      Referson Prado <prado.referson@gmail.com>
+  ~ @copyright   2026 Referson Prado
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_before">
+        <observer name="certisign_custom_code_order_after"
+                  instance="Certisign\OrderCustomCode\Observer\FillOrderCustomCode"
+        />
+    </event>
+</config>
