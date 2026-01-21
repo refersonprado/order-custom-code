@@ -1,0 +1,22 @@
+{
+    "name": "refersonprado/order-custom-code",
+    "description": "Certisign Order Custom Code",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "email": "prado.referson@gmail.com",
+            "name": "Referson Prado"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Certisign\\OrderCustomCode\\": ""
+        }
+    }
+}
