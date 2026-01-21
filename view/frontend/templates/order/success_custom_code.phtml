@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ *
+ * @author      Referson Prado <prado.referson@gmail.com>
+ * @copyright   2026 Referson Prado
+ */
+
+/** @var \Magento\Framework\Escaper $escaper*/
+/** @var \Certisign\OrderCustomCode\Block\Success\CustomCode $block */
+
+$customCode = $block->getCustomCode();
+?>
+
+<?php if ($customCode !== ''): ?>
+    <div class="certisign-custom-code">
+        <p><?= $escaper->escapeHtml(__('Custom Code:')) ?></p>
+        <span><?= $block->escapeHtml($customCode) ?></span>
+    </div>
+<?php endif; ?>

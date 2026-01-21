@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © Magento, Inc. All rights reserved.
+  ~
+  ~ @author      Referson Prado <prado.referson@gmail.com>
+  ~ @copyright   2026 Referson Prado
+  -->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Certisign_OrderCustomCode::css/custom-code.css"/>
+    </head>
+
+    <body>
+        <referenceContainer name="order.success.additional.info">
+            <block class="Certisign\OrderCustomCode\Block\Success\CustomCode"
+                   name="certisign.order.custom_code"
+                   template="Certisign_OrderCustomCode::order/success_custom_code.phtml"
+                   after="-">
+            </block>
+        </referenceContainer>
+    </body>
+</page>
