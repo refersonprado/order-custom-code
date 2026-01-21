@@ -35,7 +35,7 @@ class Config implements ConfigInterface
     {
         return $this->scopeConfig->isSetFlag(
             static::XML_PATH_ENABLED,
-            ScopeInterface::SCOPE_WEBSITE
+            ScopeInterface::SCOPE_STORE
         );
     }
 
