@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © Magento, Inc. All rights reserved.
+  ~
+  ~ @author      Referson Prado <prado.referson@gmail.com>
+  ~ @copyright   2026 Referson Prado
+  -->
+
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="certisign" translate="label" sortOrder="0">
+            <label>Certisign</label>
+        </tab>
+
+        <section id="certisign_order_custom_code" translate="label" sortOrder="900" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Order Custom Code</label>
+            <tab>certisign</tab>
+            <resource>Certisign_OrderCustomCode::config</resource>
+
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="prefix" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix</label>
+                    <comment>Example: VAL</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

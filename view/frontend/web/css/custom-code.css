@@ -20,3 +20,9 @@
     font-weight: 600;
     margin: 0;
 }
+
+@media (max-width: 767px) {
+    .certisign-custom-code {
+        padding: 8px;
+    }
+}

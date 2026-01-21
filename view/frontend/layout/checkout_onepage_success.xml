@@ -17,7 +17,8 @@
             <block class="Certisign\OrderCustomCode\Block\Success\CustomCode"
                    name="certisign.order.custom_code"
                    template="Certisign_OrderCustomCode::order/success_custom_code.phtml"
-                   after="-">
+                   after="-"
+                   ifconfig="certisign_order_custom_code/general/enabled">
             </block>
         </referenceContainer>
     </body>
