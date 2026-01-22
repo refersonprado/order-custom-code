@@ -36,7 +36,7 @@ class CodeGenerator
     public function generate(string $createdAt, string $incrementId, float|int $totalQty): string
     {
         $date = new DateTimeImmutable($createdAt);
-        $prefix = $this->config->getPrefix();
+        $prefix = $this->config->getPrefix() ?: 'VAL';
 
         return sprintf(
             '%s-%s-%s-%d',
