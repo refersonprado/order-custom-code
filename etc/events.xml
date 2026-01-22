@@ -9,7 +9,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="sales_order_place_before">
-        <observer name="certisign_custom_code_order_after"
+        <observer name="certisign_custom_code_order_before"
                   instance="Certisign\OrderCustomCode\Observer\FillOrderCustomCode" />
     </event>
 </config>

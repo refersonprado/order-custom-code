@@ -9,20 +9,20 @@ Este módulo para Magento 2 gera automaticamente um código identificador person
 * **Configuração Flexível**: Ativação e definição de prefixo via Admin.
 * **Visibilidade**:
     * Exibição na página de sucesso do checkout.
-    * Coluna dedicada na grelha de pedidos (Sales Grid).
+    * Coluna dedicada na grid de pedidos (Sales Grid).
     * Bloco informativo no detalhe do pedido no Admin.
-* **Retroatividade**: Comando de consola para popular pedidos antigos.
+* **Retroatividade**: Comando de console para popular pedidos antigos.
 
 ## Instalação
 
 ### Via Composer (Recomendado)
 
-1.  No terminal, executa:
+1.  No terminal, execute:
     ```bash
     composer require refersonprado/order-custom-code
     ```
     *(Nota: Requer que o repositório esteja configurado no teu composer.json)*.
-2.  Atualiza o Magento:
+2.  Atualize os módulos:
     ```bash
     bin/magento setup:upgrade
     ```
@@ -30,23 +30,23 @@ Este módulo para Magento 2 gera automaticamente um código identificador person
 ### Via app/code (Manual)
 
 1.  Cria a estrutura de pastas: `app/code/Certisign/OrderCustomCode`.
-2.  Copia todos os arquivos do módulo para este diretório.
-3.  Executa os comandos do Magento:
+2.  Copie todos os arquivos do módulo para este diretório.
+3.  Execute os seguintes comandos do Magento:
     ```bash
     bin/magento module:enable Certisign_OrderCustomCode
     bin/magento setup:upgrade
     bin/magento setup:di:compile
-    bin/magento setup:static-content:deploy    ```
+    bin/magento setup:static-content:deploy    
 
 ## Configuração
 
-1.  Navega até **Lojas** > **Configuração** > **Certisign** > **Order Custom Code**.
+1.  Navegue até **Lojas** > **Configuração** > **Certisign** > **Order Custom Code**.
 2.  **Enable**: Ativa a funcionalidade.
 3.  **Prefix**: Define o prefixo desejado (ex: VAL).
 
 ## Comandos CLI
 
-Para gerar códigos para pedidos que foram criados antes da instalação do módulo, utiliza o comando:
+Para gerar códigos para pedidos que foram criados antes da instalação do módulo, utilize o comando:
 
 ```bash
 bin/magento certisign:order:populate-custom-code
