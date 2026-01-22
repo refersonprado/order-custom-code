@@ -15,6 +15,6 @@ $customCode = $block->getCustomCode();
 <?php if ($customCode !== ''): ?>
     <div class="certisign-custom-code">
         <p><?= $escaper->escapeHtml(__('Custom Code:')) ?></p>
-        <span><?= $block->escapeHtml($customCode) ?></span>
+        <span><?= $escaper->escapeHtml($customCode) ?></span>
     </div>
 <?php endif; ?>

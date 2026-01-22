@@ -9,14 +9,14 @@ declare(strict_types=1);
 
 namespace Certisign\OrderCustomCode\Plugin\Magento\Sales\Api;
 
-use Magento\Sales\Api\Data\OrderInterface;
+use Magento\Sales\Api\Data\OrderSearchResultInterface;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Certisign\OrderCustomCode\Model\CustomCodeApi;
 
 class OrderRepositoryPluginGetList
 {
     /**
-     * OrderRepositoryPluginGetList constructor
+     * OrderRepositoryPluginGet constructor
      *
      * @param CustomCodeApi $customCodeApi
      */
@@ -26,16 +26,19 @@ class OrderRepositoryPluginGetList
     }
 
     /**
-     * Add custom_code to get order
+     * Add custom_code to getList (collection)
      *
      * @param OrderRepositoryInterface $subject
-     * @param OrderInterface $result
-     * @return OrderInterface
+     * @param OrderSearchResultInterface $result
+     * @return OrderSearchResultInterface
      */
-    public function afterGet(
+    public function afterGetList(
         OrderRepositoryInterface $subject,
-        OrderInterface $result
-    ): OrderInterface {
-        return $this->customCodeApi->addCustomCodeToExtensionAttributes($result);
+        OrderSearchResultInterface $result
+    ): OrderSearchResultInterface {
+        foreach ($result->getItems() as $order) {
+            $this->customCodeApi->addCustomCodeToExtensionAttributes($order);
+        }
+        return $result;
     }
 }
