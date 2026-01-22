@@ -11,4 +11,12 @@
 
     <preference for="Certisign\OrderCustomCode\Api\ConfigInterface"
                 type="Certisign\OrderCustomCode\Model\Config"/>
+
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="populate_custom_code" xsi:type="object">Certisign\OrderCustomCode\Console\Command\PopulateRetroactiveCustomCode</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
