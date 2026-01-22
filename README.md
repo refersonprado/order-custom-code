@@ -50,3 +50,30 @@ Para gerar códigos para pedidos que foram criados antes da instalação do mód
 
 ```bash
 bin/magento certisign:order:populate-custom-code
+```
+
+## Informações Adicionais
+
+Caso deseje fazer consultar SQL irei deixar algumas para facilitar o processo, como consulta por custom_code, update em massa para resetar o campo e update em massa para popular campos de pedidos que já foram feitos antes da implementação.
+1. SELECT para consulta por custom code
+```bash
+   SELECT * FROM sales_order WHERE custom_code = 'VALOR-DO-CUSTOM-CODE';
+```
+2. UPDATE para limpar todos os custom_code
+```bash
+UPDATE sales_order SET custom_code = '' WHERE custom_code IS NOT NULL;
+```
+3. UPDATE para pedidos que já foram feitos
+```bash
+UPDATE sales_order 
+SET 
+    custom_code = CONCAT(
+        'VAL', '-', 
+        DATE_FORMAT(created_at, '%Y%m'), '-', 
+        increment_id, '-', 
+        CAST(total_qty_ordered AS UNSIGNED)
+    ),
+    updated_at = NOW()
+WHERE 
+    custom_code
+```
