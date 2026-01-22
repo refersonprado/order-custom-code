@@ -1,0 +1,18 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ *
+ * @author      Referson Prado <prado.referson@gmail.com>
+ * @copyright   2026 Referson Prado
+ */
+
+/** @var \Certisign\OrderCustomCode\Block\Adminhtml\Order\View\CustomCode $block */
+$customCode = $block->getCustomCode();
+?>
+
+<?php if ($customCode): ?>
+    <tr class="custom-code-row">
+        <th><?= $block->escapeHtml(__('Custom Code')) ?></th>
+        <td><?= $block->escapeHtml($customCode) ?></td>
+    </tr>
+<?php endif; ?>
