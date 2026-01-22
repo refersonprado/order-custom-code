@@ -10,7 +10,6 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="sales_order_place_before">
         <observer name="certisign_custom_code_order_after"
-                  instance="Certisign\OrderCustomCode\Observer\FillOrderCustomCode"
-        />
+                  instance="Certisign\OrderCustomCode\Observer\FillOrderCustomCode" />
     </event>
 </config>
