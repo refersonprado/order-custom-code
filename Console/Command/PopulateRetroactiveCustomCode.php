@@ -26,14 +26,12 @@ class PopulateRetroactiveCustomCode extends Command
      * PopulateRetroactiveCustomCode constructor
      *
      * @param ResourceConnection $resource
-     * @param ConfigInterface $config
      * @param State $state
      * @param CodeGenerator $codeGenerator
      * @param string|null $name
      */
     public function __construct(
         private readonly ResourceConnection $resource,
-        private readonly ConfigInterface $config,
         private readonly State $state,
         private readonly CodeGenerator $codeGenerator,
         ?string $name = null

@@ -6,7 +6,8 @@
   ~ @copyright   2026 Referson Prado
   -->
 
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
     <extension_attributes for="Magento\Sales\Api\Data\OrderInterface">
         <attribute code="certisign_custom_code" type="string" />
     </extension_attributes>

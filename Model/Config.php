@@ -15,7 +15,6 @@ use Magento\Store\Model\ScopeInterface;
 
 class Config implements ConfigInterface
 {
-
     /**
      * Config constructor
      *

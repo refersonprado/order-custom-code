@@ -14,6 +14,11 @@ use DateTimeImmutable;
 
 class CodeGenerator
 {
+    /**
+     * CodeGenerator constructor
+     *
+     * @param ConfigInterface $config
+     */
     public function __construct(
         private readonly ConfigInterface $config
     ) {

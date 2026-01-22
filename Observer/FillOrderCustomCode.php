@@ -32,6 +32,12 @@ class FillOrderCustomCode implements ObserverInterface
     ) {
     }
 
+    /**
+     * Process fill to generate custom_code
+     *
+     * @param Observer $observer
+     * @return void
+     */
     public function execute(Observer $observer): void
     {
         if (!$this->config->isEnabled()) {
