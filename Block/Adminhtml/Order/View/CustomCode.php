@@ -16,6 +16,13 @@ use Certisign\OrderCustomCode\Api\ConfigInterface;
 
 class CustomCode extends Template
 {
+    /**
+     * CustomCode constructor
+     *
+     * @param Template\Context $context
+     * @param Registry $registry
+     * @param array $data
+     */
     public function __construct(
         Template\Context $context,
         private readonly Registry $registry,
@@ -24,11 +31,21 @@ class CustomCode extends Template
         parent::__construct($context, $data);
     }
 
+    /**
+     * Get last order
+     *
+     * @return OrderInterface|null
+     */
     public function getOrder(): ?OrderInterface
     {
         return $this->registry->registry('current_order');
     }
 
+    /**
+     * Get custom code field
+     *
+     * @return string
+     */
     public function getCustomCode(): string
     {
         $order = $this->getOrder();

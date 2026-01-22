@@ -20,7 +20,10 @@
                 type="Certisign\OrderCustomCode\Model\Config"/>
 
     <type name="Magento\Sales\Api\OrderRepositoryInterface">
-        <plugin name="certisign_order_custom_code_extension_attribute"
-                type="Certisign\OrderCustomCode\Plugin\Magento\Sales\Api\OrderRepositoryPlugin"/>
+        <plugin name="certisign_order_custom_code_extension_attribute_get"
+                type="Certisign\OrderCustomCode\Plugin\Magento\Sales\Api\OrderRepositoryPluginGet"/>
+
+        <plugin name="certisign_order_custom_code_extension_attribute_get_list"
+                type="Certisign\OrderCustomCode\Plugin\Magento\Sales\Api\OrderRepositoryPluginGetList"/>
     </type>
 </config>
